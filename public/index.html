@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Comidas Deliciosas</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 20px;
+      }
+      .comida-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      h3 {
+        color: #333;
+      }
+      p {
+        color: #666;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🍽️ Menu de Comidas</h1>
+    <div id="lista-comidas"></div>
+
+    <script>
+      fetch("comidas.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const listaDiv = document.getElementById("lista-comidas");
+          data.forEach((comida) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("comida-item");
+            itemDiv.innerHTML = `
+                        <h3>${comida.nome}</h3>
+                        <p>${comida.descricao}</p>
+                    `;
+            listaDiv.appendChild(itemDiv);
+          });
+        })
+        .catch((error) => console.error("Erro ao buscar comidas:", error));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+[
+  { "id": 1, "nome": "Lasanha", "descricao": "Massa, carne moída e queijo." },
+  {
+    "id": 2,
+    "nome": "Feijoada",
+    "descricao": "Feijão preto com carnes salgadas."
+  },
+  {
+    "id": 3,
+    "nome": "Acarajé",
+    "descricao": "Bolinho de feijão-fradinho frito no azeite de dendê."
+  },
+  {
+    "id": 4,
+    "nome": "Pizza",
+    "descricao": "Massa redonda com molho de tomate e recheios variados."
+  },
+  {
+    "id": 5,
+    "nome": "Trufa",
+    "descricao": "Bom demais"
+  }
+]
